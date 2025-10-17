@@ -1,0 +1,67 @@
+name: CI/CD Node.js Pipeline
+
+on:
+  push:
+    branches: [ "main", "workflow" ]
+  pull_request:
+    branches: [ "main", "workflow" ]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'   
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run Tests (Karma + Jasmine)
+        run: npx karma start --single-run
+
+      - name: Run ESLint
+        run: npx eslint . --fix
+
+      - name: Run Snyk (Security Scan)
+        env:
+          SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+        run: npx snyk test || echo "Snyk encontro vulnerabilidades, continuando flujo."
+
+      - name: Install Sonar Scanner
+        run: npm install -g sonar-scanner
+
+      - name: Run Sonar Analysis
+        env:
+            SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+        run: |
+            sonar-scanner \
+              -Dsonar.projectKey=NBello26_PruebaDevOps2 \
+              -Dsonar.organization=nbello26 \
+              -Dsonar.sources=./src \
+              -Dsonar.host.url=https://sonarcloud.io \
+              -Dsonar.login=${SONAR_TOKEN} \
+              -Dsonar.branch.name=main
+  docker:
+    needs: build-and-test
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Build and Push Docker image
+        env:
+          DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
+          DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
+        run: |
+          echo $DOCKER_PASSWORD | docker login -u $DOCKER_USERNAME --password-stdin
+          docker build -t $DOCKER_USERNAME/prueba2devops:latest .
+          docker tag $DOCKER_USERNAME/prueba2devops:latest $DOCKER_USERNAME/prueba2devops:${{ github.sha }}
+          docker push $DOCKER_USERNAME/prueba2devops:latest
+          docker push $DOCKER_USERNAME/prueba2devops:${{ github.sha }}
