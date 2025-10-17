@@ -40,7 +40,7 @@ Solo se ejecuta si el anterior fue exitoso.
 
 ### Secretos requeridos
 
-Configura estos secretos en GitHub(Deben ser solicitados al creador del proyecto NBello26):
+Configura estos secretos en GitHub(En caso de no funcionar el codigo deben ser solicitados al creador del proyecto NBello26):
 - `SNYK_TOKEN`
 - `SONAR_TOKEN`
 - `DOCKER_USERNAME`
