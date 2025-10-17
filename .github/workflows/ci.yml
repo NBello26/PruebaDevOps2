@@ -35,4 +35,16 @@ jobs:
 
       - name: Install Sonar Scanner
         run: npm install -g sonar-scanner
+
+      - name: Run Sonar Analysis
+        env:
+            SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+        run: |
+            sonar-scanner \
+              -Dsonar.projectKey=NBello26_PruebaDevOps2 \
+              -Dsonar.organization=nbello26 \
+              -Dsonar.sources=./src \
+              -Dsonar.host.url=https://sonarcloud.io \
+              -Dsonar.login=${SONAR_TOKEN} \
+              -Dsonar.branch.name=main
           
