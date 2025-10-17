@@ -61,7 +61,7 @@ jobs:
           DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
         run: |
           echo $DOCKER_PASSWORD | docker login -u $DOCKER_USERNAME --password-stdin
-          docker build -t $DOCKER_USERNAME/Prueba2DevOps:latest .
-          docker tag $DOCKER_USERNAME/Prueba2DevOps:latest $DOCKER_USERNAME/Prueba2DevOps:${{ github.sha }}
-          docker push $DOCKER_USERNAME/Prueba2DevOps:latest
-          docker push $DOCKER_USERNAME/Prueba2DevOps:${{ github.sha }}
+          docker build -t $DOCKER_USERNAME/prueba2devops:latest .
+          docker tag $DOCKER_USERNAME/prueba2devops:latest $DOCKER_USERNAME/prueba2devops:${{ github.sha }}
+          docker push $DOCKER_USERNAME/prueba2devops:latest
+          docker push $DOCKER_USERNAME/prueba2devops:${{ github.sha }}
