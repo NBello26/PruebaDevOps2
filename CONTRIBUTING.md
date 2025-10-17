@@ -63,3 +63,11 @@ src/
 2. Usa comillas dobles para strings, como "texto" (según convención actual).
 3. Ordena props y atributos JSX con lógica y consistencia.
 4. Agrega saltos de línea donde mejoren la legibilidad.
+
+## Como escribir el codigo
+
+| Elemento              | Convención   | Ejemplo                        |
+| --------------------- | ------------ | ------------------------------ |
+| Variables | `camelCase`  | `className`, `descripcionId` |
+| Componentes y funciones        | `PascalCase` | `Boton`, `ListaCard` , `etc`          |
+| Carpetas   | `kebab-case` | `lista-card/`      |
