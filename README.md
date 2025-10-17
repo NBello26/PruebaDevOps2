@@ -49,12 +49,3 @@ Configura estos secretos en GitHub(Deben ser solicitados al creador del proyecto
 ---
 
 Este pipeline garantiza que todo código subido esté probado, analizado y desplegado de forma segura.
-
-
-## Como escribir el codigo
-
-| Elemento              | Convención   | Ejemplo                        |
-| --------------------- | ------------ | ------------------------------ |
-| Variables | `camelCase`  | `className`, `descripcionId` |
-| Componentes y funciones        | `PascalCase` | `Boton`, `ListaCard` , `etc`          |
-| Carpetas   | `kebab-case` | `lista-card/`      |
