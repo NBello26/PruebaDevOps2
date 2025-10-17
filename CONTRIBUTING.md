@@ -38,7 +38,7 @@ revisa el codigo con Eslint, analiza dependencias son synk, ejecuta analizis con
 3. **Elimina la rama** tanto local como remotamente para mantener el repositorio limpio.
 
 - Este proyecto sigue la arquitectura de Atomic Design, con las siguientes capas:
-
+```
 src/
   └── componentes/
         ├── atomos/       # Elementos indivisibles (Botón, Imagen, Texto)
@@ -46,6 +46,7 @@ src/
         ├── organismos/   # Secciones completas (ListaCard)
         ├── plantillas/   # Estructura general de página (Layout)
         └── paginas/      # Vistas del router (Descripcion, Home.)
+```
 
 ### Pruebas
 - Actualmente, las pruebas se hacen manualmente en entorno local (npm start).
