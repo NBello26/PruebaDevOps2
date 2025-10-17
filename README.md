@@ -49,3 +49,11 @@ Configura estos secretos en GitHub(Deben ser solicitados al creador del proyecto
 ---
 
 Este pipeline garantiza que todo código subido esté probado, analizado y desplegado de forma segura.
+
+
+## Como levantar contenedores
+
+1. Abrir una terminal en tu Visual Estudio Code
+2. Dirigirte a la carpeta de origen del proyecto donde se encuentran los archivos docker
+3. Ejecuta el comando `docker-compose up -d --build`
+4. Para revisar que tus contenedores esten activos ejecuta `docker ps -a`
