@@ -55,5 +55,8 @@ Este pipeline garantiza que todo código subido esté probado, analizado y despl
 
 1. Abrir una terminal en tu Visual Estudio Code
 2. Dirigirte a la carpeta de origen del proyecto donde se encuentran los archivos docker
-3. Ejecuta el comando `docker-compose up -d --build`
-4. Para revisar que tus contenedores esten activos ejecuta `docker ps -a`
+3. Ejecuta el comando `docker-compose up -d --build` para construir y subir los contenedores.
+4. Si ya los tienes construidos usa `docker-compose up`
+5. Para revisar que tus contenedores esten activos ejecuta `docker ps -a`
+6. Para detener los contenedores usa `docker-compose stop`
+7. Para detener y borrar los contenedores usa `docker-compose down`
