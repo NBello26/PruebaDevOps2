@@ -31,7 +31,7 @@ revisa el codigo con Eslint, analiza dependencias son synk, ejecuta analizis con
 | Tipo      | Prefijo sugerido         | Ejemplo                             |
 |-----------|--------------------------|-------------------------------------|
 | Funcionalidad nueva | `descripcionFuncionalidad/`              | `workflow`               |
-| Ajuste urgente      | `hotfix/`               | `hotfix/imagen-rotura`             |
+| Ajuste urgente      | `hotfix/`               | `hotfix/AjusteUrgente`             |
 
 ### Proceso de integración
 
