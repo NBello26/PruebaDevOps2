@@ -17,9 +17,11 @@ Seguimos un modelo de trabajo basado en **GitFlow simplificado**, adaptado para 
 ### Ramas
 - `main`: Contiene todo el codigo estable y funcional del proyecto, ademas de un workflow, contributing.md y readme.md.
 - `workflow`: Contiene el workflow para este proyecto que genera un workflow que instala dependencias basicas, ejecuta los test,
-revisa el codigo con Eslint, analiza dependencias son synk, ejecuta analizis con sonarcloud y contruye una img en docker.
-- `Readme`: Explica qué hace el workflow y cómo levantar los contenedores.
-- `Contributing`: Contiene buenas practicas, metodo de trabajo, estructuras para el codigo, estructura para el orden del proyecto.
+revisa el codigo con Eslint, analiza dependencias son synk, ejecuta analizis con sonarcloud y contruye una img en docker
+(Esta rama deberería estar eliminada pero por temas de evaluación esta activa).
+- `Readme`: Explica qué hace el workflow y cómo levantar los contenedores (Esta rama deberería estar eliminada pero por temas de evaluación esta activa).
+- `Contributing`: Contiene buenas practicas, metodo de trabajo, estructuras para el codigo, estructura para el orden del proyecto
+(Esta rama deberería estar eliminada pero por temas de evaluación esta activa).
 
 ### Cómo trabajar con ramas
 
