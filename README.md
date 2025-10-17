@@ -34,7 +34,7 @@ Solo se ejecuta si el anterior fue exitoso.
 **Pasos:**
 1. Inicia sesión en Docker Hub
 2. Construye y etiqueta imagen Docker
-3. Publica imagen (`latest` y por commit) en Docker Hub
+3. Publica imagen (`latest`) en Docker Hub
 
 ---
 
