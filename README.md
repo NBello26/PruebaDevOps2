@@ -1,10 +1,10 @@
-### ¿Qué hace el workflow?
+## ¿Qué hace el workflow?
 
-## CI/CD Pipeline con GitHub Actions
+### CI/CD Pipeline con GitHub Actions
 
 Este proyecto utiliza un workflow de CI/CD automatizado mediante **GitHub Actions** para pruebas, análisis y despliegue de una aplicación Node.js.
 
-## Disparadores
+### Disparadores
 
 El workflow se ejecuta en los siguientes casos:
 - Push a `main` o `workflow`
@@ -12,7 +12,7 @@ El workflow se ejecuta en los siguientes casos:
 
 ---
 
-## Job 1: `build-and-test`
+### Job 1: `build-and-test`
 
 Se encarga de validar la calidad del código.
 
@@ -27,7 +27,7 @@ Se encarga de validar la calidad del código.
 
 ---
 
-## Job 2: `docker`
+### Job 2: `docker`
 
 Solo se ejecuta si el anterior fue exitoso.
 
@@ -38,7 +38,7 @@ Solo se ejecuta si el anterior fue exitoso.
 
 ---
 
-## Secretos requeridos
+### Secretos requeridos
 
 Configura estos secretos en GitHub(Deben ser solicitados al creador del proyecto NBello26):
 - `SNYK_TOKEN`
@@ -51,7 +51,7 @@ Configura estos secretos en GitHub(Deben ser solicitados al creador del proyecto
 Este pipeline garantiza que todo código subido esté probado, analizado y desplegado de forma segura.
 
 
-### Como escribir el codigo
+## Como escribir el codigo
 
 | Elemento              | Convención   | Ejemplo                        |
 | --------------------- | ------------ | ------------------------------ |
