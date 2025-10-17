@@ -11,18 +11,16 @@ services:
       - DB_HOST=db
       - DB_USER=root
       - DB_PASSWORD=1234
-      - DB_NAME=midb
+      - DB_NAME=db
 
   db:
     image: mysql:5.7
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: 1234
-      MYSQL_DATABASE: midb
+      MYSQL_DATABASE: db
     ports:
       - "3306:3306"
-    volumes:
-      - db_data:/var/lib/mysql
 
   phpmyadmin:
     image: phpmyadmin/phpmyadmin
@@ -32,6 +30,3 @@ services:
     environment:
       PMA_HOST: db
       MYSQL_ROOT_PASSWORD: 1234
-
-volumes:
-  db_data:
